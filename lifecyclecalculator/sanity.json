@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "project": {
+    "name": "Lifecycle_calculator"
+  },
+  "api": {
+    "projectId": "8ylajnfa",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "barcode-input",
+    "@sanity/dashboard",
+    "dashboard-widget-document-list",
+    "dashboard-widget-netlify"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+		{ 
+  "implements": "part:@sanity/dashboard/config", 
+  "path": "./dashboardConfig.js" 
+	}
+  ]
+}
